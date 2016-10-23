@@ -1,0 +1,83 @@
+		[
+		{	
+			nome: '10 Kg di torto marcio',
+			prezzo: 12.95,
+			descrizione: 'Giusto così, da tirare agli amici quando sbagliano',
+			specifiche: 'Terra, semplicemente terra, ma dannatamente costosa',
+			disponiblità: true,
+			soldOut: false,
+			immagini: [
+				{
+				grossa:'img/full/torto.jpg',
+				anteprima: 'img/thumb/tortoMini.jpg',				
+				}
+			],
+			recensioni: [{
+					stelle: 5,
+					testo: "ABCD",
+					autore: "abcde@fghi.lmn"
+				},{
+					stelle: 3,
+					testo: "DEFG",
+					autore: "abcde@fghi.lmn"
+				},{
+					stelle: 4,
+					testo: "HILM",
+					autore: "abcde@fghi.lmn"
+				}]
+		},
+		{
+			nome: 'Ammazza che mazza',
+			prezzo: 8.55,
+			descrizione: 'Per la donna che non deve chiedere mai',
+			specifiche: 'Il bastone, miglior amico di ogni donna che si rispetti',
+			disponiblità: true,
+			soldOut: false,
+			immagini: [
+				{
+				grossa:'img/full/mazza.jpg',
+				anteprima: 'img/thumb/mazzaMini.jpg',				
+				}
+			],
+			recensioni:  [{
+					stelle: 5,
+					testo: "ABCD",
+					autore: "abcde@fghi.lmn"
+				},{
+					stelle: 3,
+					testo: "DEFG",
+					autore: "SEHSDFGERCSR@fghi.lmn"
+				},{
+					stelle: 2,
+					testo: "HILM",
+					autore: "YUINYB@fghi.lmn"
+				}]
+	    },
+		{
+			nome: 'Sogni nel cassetto',
+			prezzo: 21.55,
+			descrizione: 'A volte guardarsi indietro non fa bene',
+			specifiche: 'Eh sapessi di cosa sono fatti non sarei di certo qui',
+			disponiblità: true,
+			soldOut: false,
+			immagini: [
+				{
+				grossa:'img/full/sogni.jpg',
+				anteprima: 'img/thumb/sogniMini.jpg',				
+				}
+			],
+			recensioni:  [{
+					stelle: 1,
+					testo: "ABCD",
+					autore: "abcde@fghi.lmn"
+				},{
+					stelle: 2,
+					testo: "DEFG",
+					autore: "abcde@fghi.lmn"
+				},{
+					stelle: 5,
+					testo: "HILM",
+					autore: "abcde@fghi.lmn"
+				}]
+	    }
+		]

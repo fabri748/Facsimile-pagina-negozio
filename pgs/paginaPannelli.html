@@ -1,0 +1,28 @@
+<section>
+	<ul class="nav nav-pills ">
+		<li ng-class=" { active:pannello.selezionato(1)} ">
+			<a href ng-click="pannello.selezioneTab(1)">Descrizione</a>
+		</li>
+		<li ng-class=" { active:pannello.selezionato(2)} ">
+			<a href ng-click="pannello.selezioneTab(2)">Specifiche</a>
+		</li>
+		<li ng-class=" { active:pannello.selezionato(3)} ">
+			<a href ng-click="pannello.selezioneTab(3)">Recensioni</a>
+		</li>
+	</ul>
+	
+	<!-- Pannello di descrizione dell'oggetto -->
+	<div ng-show="pannello.selezionato(1)">
+		<prod-descrizione></prod-descrizione>
+	</div>
+	
+	<!-- Pannello specifiche dell'oggetto -->	
+	<div ng-show="pannello.selezionato(2)">
+		<prod-specifiche></prod-specifiche>	
+	</div>	
+	
+	<!-- Pannello recensioni dell'oggetto -->
+	<div ng-show="pannello.selezionato(3)">
+		<prod-recensione></prod-recensione>								
+	</div>		
+</section>

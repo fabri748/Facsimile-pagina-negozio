@@ -1,0 +1,41 @@
+<!-- Lista recensioni dell'oggetto -->
+<ul>
+	<h4>Recensioni</h4> 
+	<li ng-repeat="recensione in prodotto.recensioni">
+	<blockquote >
+		<strong>{{recensione.stelle}} Stelle</strong>
+		{{recensione.testo}}
+		<cite class="clearfix">--by {{recensione.autore}}</cite>
+	</blockquote>
+	</li>
+</ul>
+	
+<!--  Modulo recensione -->
+<form name="moduloRecensione" ng-controller="ControllerRecensioni as cntRec" ng-submit="moduloRecensione.$valid && cntRec.aggRec(prodotto)" novalidate>
+		
+<!--  Anteprima recensione in tempo reale -->
+	<h6>Anteprima recensione</h6>
+	<blockquote >
+		<b>Stelle: {{cntRec.recensione.stelle}}</b>
+		{{cntRec.recensione.testo}}
+		<cite>--by {{cntRec.recensione.autore}}</cite>
+	</blockquote>
+		
+	<!--  Campi modulo recensione -->
+	<h4>Scrivi una recensione</h4>																											
+	<fieldset class="form-group">
+		<select ng-model="cntRec.recensione.stelle" class="form-control" ng-options="stelle for stelle in [5,4,3,2,1]" title="Stelle" required>
+			<option value="">Valuta il prodotto!</option>
+		</select>
+	</fieldset>
+	<fieldset class="form-group">
+		<textarea ng-model="cntRec.recensione.testo" class="form-control" placeholder="Scrivi una breve recensione del prodotto..." title="Recensione" required></textarea>
+	</fieldset>
+	<fieldset class="form-group">
+		<input ng-model="cntRec.recensione.autore" type="email" class="form-control" placeholder="esempio@esempio.org" title="Email" required />
+	</fieldset>
+	<fieldset class="form-group">
+		<input type="submit" class="btn btn-primary pull-right" value="Invia Recensione" />
+	</fieldset>
+	
+</form>	

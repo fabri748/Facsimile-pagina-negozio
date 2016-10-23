@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="negozio">
+<head>
+	
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+</head>
+
+<body ng-controller ="ControllerNegozio as negozio">
+	
+	<div style="width:500px">
+		<!--  Intestazione negozio  -->
+    <header>
+      <h1 class="text-center">Titolo Negozio</h1>
+      <h2 class="text-center">– tutorial AngularJS –</h2>
+	  <h3 class="text-center"> from Codeschool.com</h2>
+	  
+    </header>
+		<!-- Container prodotti -->
+		<div class="list-group ">
+			<!-- Container singolo prodotto -->
+			<div class="list-group-item " ng-repeat="prodotto in negozio.prodotti | orderBy:'-prezzo'"> 										
+				<prod-titolo></prod-titolo>
+					 
+				<!-- Immagine prodotto -->
+				<prod-immagini></prod-immagini>	
+					
+				<!-- Pannelli dei prodotti -->
+				<etichette-pannelli></etichette-pannelli>	
+			</div>
+		</div>				
+	</div>	
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/direttive/dirProdotti.js"></script>
+		
+	
+</body>
+
+</html>
